@@ -1,0 +1,30 @@
+-----------------------------------------------------------------
+/* 태그 선택자. 문서 안에 있는 모든 h1 태그에 대해 이 속성을 적용한다. */
+/* 사용법 : <h1> 사용법 </h1> */
+h1{
+	font-size: 30px;
+	font-weight: normal;
+	margin: 0;
+	margin-bottom: 10px;
+}
+-----------------------------------------------------------------
+/* id 선택자. 식별하기 위해 단 한 번만 사용 */
+/* 사용법 : <li id = "progress-bar"> 사용법 </li> */
+#progress-bar{
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px;
+	list-style: none;
+}
+-----------------------------------------------------------------
+/* 클래스 선택자. id 선택자와 달리 그룹핑을 해서 여러 대상에 사용할 수 있다. */
+/* 사용법 : <li class = "common-btn"> 사용법 </li> */
+.common-btn{
+	padding: 4px 6px;
+	background-color: #07C;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	text-decoration: none;
+}
+-----------------------------------------------------------------

@@ -8,16 +8,19 @@ Click me</button>
 
 <script>
 
-function myFunction() {
-  document.getElementById("demo").innerHTML =
-  <div class="back">
-    <img src="./images/포도글씨.png" alt="포도" > </div>
-}
-
 function play(){
      var audio = document.getElementById("audio");
      audio.play();
 }
+
+
+function card_view{
+  var imgarr = new Array();
+
+  for (var i = 0; i < 10; i++) {
+
+}
+
 var picture = new Array();
 var word = new Array();
 var i;

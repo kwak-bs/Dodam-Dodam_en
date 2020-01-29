@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./js/jquery-3.4.1.min.js"></script>
+<title>
+  DB test
+</title>
+  <body>
+    
+    <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.7.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/6.2.0/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="./js/index.js"></script>
+
+    <h1>제발나와라</h1>
+      <script>
+        var storageRef = firebase.storage("gs://test-db-f70aa.appspot.com").ref();
+
+        //json data parsing
+        var textData = "https://test-db-f70aa.firebaseio.com/category/alphabets/a/front/.json";
+        var imageData = JSON.parse(textData);
+
+        //이미지 안나오고 text로 나옴.
+      </script>
+      <img src = "https://test-db-f70aa.firebaseio.com/category/alphabets/a/front/.json" alt="이미지를 찾을 수 없음"/>
+
+
+  </body>
+
+</html>

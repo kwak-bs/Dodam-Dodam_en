@@ -240,5 +240,9 @@
        border: 1px solid #bcbcbc;
      }
 
+     #music {
+       display:none;
+     }
+
 </style>
 /** 배경 이미지 세팅 */

@@ -1,0 +1,11 @@
+.image {
+  display: flex;
+}
+
+.image img {
+  display: block;
+}
+
+.image img:nth-child(1) {
+  margin-left: 46px;
+}

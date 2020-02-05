@@ -1,3 +1,5 @@
+// 함수 그냥 구상만 하는중
+
 <!DOCTYPE html>
 <html>
 <body>

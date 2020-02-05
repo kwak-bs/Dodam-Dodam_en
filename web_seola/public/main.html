@@ -1,55 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./js/jquery-3.4.1.min.js"></script>
-<title>도담도담</title>
-
-      <!-- Load custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- Load Interactive Canvas JavaScript -->
-    <script src="https://www.gstatic.com/assistant/interactivecanvas/api/interactive_canvas.min.js"></script>
-
-    <!-- Load PixiJS for graphics rendering -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.7/pixi.min.js"></script>
-</head>
-<body>
-
-  <div id="audio">
-  <audio autoplay>
-    <source src="./sound/bgm30per.mp3" type="audio/mpeg">
-    <p>If you can read this, your browser does not support the audio element.</p>
-  </audio>
-  </div>
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.7.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-  <div style="text-align:center; "> <!-- div는 7개정도 속성이 있어 같이 사용한다. 여기선 style속성으로 텍스트 정렬 방향을 지정했다. -->
-	<header> <!-- 헤더 태그는 이 웹의 간판같은 의미 -->
-    <img src="./images/main_eng.png" style="max-width:45%; height:auto;"></a>
-  </header>
-</div>
-
-<div class="parent">
-  <div class="first">
-    <a href="game-1.html"><img src="./images/word.png"  width="80%" height="auto" alt="낱말카드">
-  </div>
-  <div class="second">
-    <a href="game.html"><img src="./images/number.png" width="80%" height="auto" alt="숫자카드">
-  </div>
-  <div class="third">
-    <a href="replay.html"><img src="./images/rpl.png" width="80%" height="auto" alt="다시보기" >
-  </div>
-</div>
-
-
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.0/pixi.min.js"></script>
+        <title>DODAM</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="audio">
+            <audio autoplay>
+                <source src="./sound/bgm.mp3" type="audio/mpeg">
+                <p>If you can read this, your browser does not support the audio element.</p>
+            </audio>
+        </div>
+        <div style="text-align:center">
+            <header>
+                <img src="./images/title.png" style="max-width:45%; height:auto;">
+            </header>
+        </div>
+        <!-- 지금은 아이콘을 클릭하면 해당 html으로 넘어가도록 했지만 현재 클릭하면 그 값을 음성과 같이 인식해서 intent 넘어가는 방식으로 구현 중 -->
+        <div class="parent">
+            <div class="first">
+                <a href="game-1.html"><img src="./images/word.png" width="80%" height="auto" alt="낱말카드">
+            </div>
+                <div class="second">
+                    <a href="game-1.html"><img
+                        src="./images/number.png" width="80%" height="auto" alt="숫자카드">
+                </div>
+                    <div class="third">
+                        <a href="replay.html"><img src="./images/replay.png" width="80%" height="auto" alt="다시보기">
+                    </div>
+        </div>
+        <!-- Load custom JavaScript after elements are on page -->
+    <script src="js/action.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/log.js"></script>
+  </body>
 </html>

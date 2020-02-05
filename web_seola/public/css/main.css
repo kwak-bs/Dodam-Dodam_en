@@ -244,5 +244,14 @@
        display:none;
      }
 
+     .view {
+       position: relative;
+       flex: 1;
+     }
+
+     .stats {
+      display: flex;
+      justify-content: flex-end;
+    }
 </style>
 /** 배경 이미지 세팅 */

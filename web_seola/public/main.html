@@ -17,11 +17,12 @@
 </head>
 <body>
 
-  <audio controls autoplay>
-    <source src="./sound/bgm.ogg" type="audio/ogg">
-    <source src=",/sound/bgm.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+  <div id="audio">
+  <audio autoplay>
+    <source src="./sound/bgm30per.mp3" type="audio/mpeg">
+    <p>If you can read this, your browser does not support the audio element.</p>
   </audio>
+  </div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/7.7.0/firebase-app.js"></script>
@@ -32,34 +33,20 @@
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
   <div style="text-align:center; "> <!-- div는 7개정도 속성이 있어 같이 사용한다. 여기선 style속성으로 텍스트 정렬 방향을 지정했다. -->
-    <div class="parent">
 	<header> <!-- 헤더 태그는 이 웹의 간판같은 의미 -->
-    <img src="./images/title_embo.png" style="max-width:60%; height:auto;"></a>
+    <img src="./images/main_eng.png" style="max-width:45%; height:auto;"></a>
   </header>
 </div>
-</div>
-<!--
-  <div style="text-align:center; max-width: 80%; height: auto">
-		<div style="float: left; width: 33%;">
-			<a href="game.html"><img src="./images/word.png" width="100%" height="100%" alt="낱말카드">
-		</div>
-		<div style="float: left; width: 33%;">
-			<a href="game.html"><img src="./images/num.png" width="100%" height="100%" alt="숫자카드">
-		</div>
-		<div style="float: left; width: 33%;">
-			<a href="review.html"><img src="./images/review.png" width="100%" height="100%" alt="다시보기">
-		</div>
-	</div>
--->
+
 <div class="parent">
   <div class="first">
-    <a href="game.html"><img src="./images/abc.png"  width="80%" height="auto" alt="낱말카드">
+    <a href="game-1.html"><img src="./images/word.png"  width="80%" height="auto" alt="낱말카드">
   </div>
   <div class="second">
-    <a href="game-1.html"><img src="./images/123.png" width="80%" height="auto" alt="숫자카드">
+    <a href="game.html"><img src="./images/number.png" width="80%" height="auto" alt="숫자카드">
   </div>
   <div class="third">
-    <a href="replay.html"><img src="./images/replay.png" width="80%" height="auto" alt="다시보기" >
+    <a href="replay.html"><img src="./images/rpl.png" width="80%" height="auto" alt="다시보기" >
   </div>
 </div>
 

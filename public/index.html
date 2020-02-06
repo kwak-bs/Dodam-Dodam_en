@@ -10,34 +10,109 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-
-        <div id="audio">
-            <audio autoplay>
-                <source src="./sound/bgm.mp3" type="audio/mpeg">
-                <p>If you can read this, your browser does not support the audio element.</p>
-            </audio>
-        </div>
-        <div style="text-align:center">
-            <header>
-                <img src="./images/title.png" style="max-width:45%; height:auto;">
-            </header>
-        </div>
-        <!-- 지금은 아이콘을 클릭하면 해당 html으로 넘어가도록 했지만 현재 클릭하면 그 값을 음성과 같이 인식해서 intent 넘어가는 방식으로 구현 중 -->
-        <div class="parent">
-            <div class="first">
-                <a href="game-1.html"><img src="./images/word.png" width="80%" height="auto" alt="낱말카드">
+        <div id="main">
+            <div id="audio">
+                <audio autoplay>
+                    <source src="sound/bgm.mp3" type="audio/mpeg">
+                    <p>If you can read this, your browser does not support the audio element.</p>
+                </audio>
             </div>
-                <div class="second">
-                    <a href="game-1.html"><img
-                        src="./images/number.png" width="80%" height="auto" alt="숫자카드">
+            <div style="text-align:center">
+                <header>
+                    <img src="images/title.png" style="max-width:45%; height:auto;">
+                </header>
+            </div>
+            <div class="parent">
+                <div class="first">
+                    <img
+                        src="images/word.png"
+                        width="80%"
+                        height="auto"
+                        alt="낱말카드"
+                        onclick="word()">
                 </div>
-                    <div class="third">
-                        <a href="replay.html"><img src="./images/replay.png" width="80%" height="auto" alt="다시보기">
-                    </div>
+                <div class="second">
+                    <img
+                        src="images/number.png"
+                        width="80%"
+                        height="auto"
+                        alt="숫자카드"
+                        onclick="number()">
+                </div>
+                <div class="third">
+                    <img
+                        src="images/replay.png"
+                        width="80%"
+                        height="auto"
+                        alt="다시보기"
+                        onclick="replay()">
+                </div>
+            </div>
         </div>
-        <!-- Load custom JavaScript after elements are on page -->
-    <script src="js/action.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/log.js"></script>
+
+        <!-- User selects word game -->
+        <div id="word">
+            <div class="container">
+                <div class="card" onclick="flip()">
+                    <div class="front">
+                    <img src="images/grape-1.png" alt="포도"> </div>
+                    <div class="back">
+                    <img src="images/grape-2.png" alt="글씨"> </div>
+                </div>
+            </div>
+            <div class="repeat">
+                <img src="./images/repeat.png">
+            </div>
+            <div class="my-box">
+                word game page
+            </div>
+            <div class="homebutton">
+            <img src="./images/home.png" onclick="home()"> </div>
+        </div>
+
+        <!-- User selects number game -->
+        <div id="number">
+            <div class="container">
+                <div class="card" onclick="flip(event)">
+                    <div class="front">
+                    <img src="images/grape-1.png" alt="포도"> </div>
+                    <div class="back">
+                    <img src="images/grape-2.png" alt="글씨"> </div>
+                </div>
+            </div>
+            <div class="repeat">
+                <img src="./images/repeat.png">
+            </div>
+            <div class="my-box">
+                number game page.
+            </div>
+            <div class="homebutton">
+            <img src="./images/home.png" onclick="home()"> </div>
+        </div>
+
+        <!-- User selects replay -->
+        <div id="replay">
+            <div class="container">
+                <div class="card" onclick="flip(event)">
+                    <div class="front">
+                    <img src="images/grape-1.png" alt="포도"> </div>
+                    <div class="back">
+                    <img src="images/grape-2.png" alt="글씨"> </div>
+                </div>
+            </div>
+            <div class="repeat">
+                <img src="./images/repeat.png">
+            </div>
+            <div class="my-box">
+                replay page
+            </div>
+            <div class="homebutton">
+            <img src="./images/home.png" onclick="home()"> </div>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script src="js/action.js"></script>
+        <script src="js/func-prac.js"></script> <!-- 서버와 연동 위한 코드분석용 파일 -->
+        <script src="js/log.js"></script>
   </body>
 </html>

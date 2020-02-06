@@ -5,51 +5,28 @@ var firebaseConfig = {
     databaseURL: "https://dodamproject-en.firebaseio.com",
     projectId: "dodamproject-en",
     storageBucket: "dodamproject-en.appspot.com",
+    messagingSenderId: "300480487895",
     appId: "1:300480487895:web:1b4a1ec33ed6fbc99ceb92"
   };
 
 firebase.initializeApp(firebaseConfig);
+var storage = firebase.database();
 var database = firebase.database();
-var ref = database.ref("category/numbers/"); //하위폴더 a,b있음
 
- ref.once("value", function(snapshot) {   //once = 변경을 수신대기하지 않고 단순히 데이터의 스냅샷만 필요할 때
-  var card = snapshot.val();
-  var img = document.getElementById('word-card');
-  var img2 = document.getElementById('word-card-back');
-  img.src = card.one[0];
-  img2.src = card.one[1];
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://dodamproject-en.firebaseio.com/category/numbers/.json");
+xhr.send();
 
-  console.log(card);
-  console.log(card.one);
-  console.log(card.two);
-}, function(errorObject) {
-  console.log("The read failed:" + errorObject);
-});
+xhr.onreadystatechange = function() {
+  if(xhr.readyState === XMLHttpRequest.DONE) {
+    if(xhr.status == 200) {
+      cardsJson = JSON.parse(xhr.responseText);
+      var img = document.getElementById('word-card');
+      img.src = cardsJson.two[0];
 
-var state = 0;
-
-function changeImage() {
-  if(state == 0) {
-    state = 1;
-
-    ref.once("value", function(snapshot) {
-     var card = snapshot.val();
-     var img = document.getElementById('grape-card');
-     img.src = card.a[1];
-
-    }, function(errorObject) {
-     console.log("The read failed:" + errorObject);
-    });
+      console.log(img.src);
+    }else {
+      console.log("fail to load");
+    }
   }
-  else {
-    state = 0;
-    ref.once("value", function(snapshot) {
-     var card = snapshot.val();
-     var img = document.getElementById('grape-card');
-     img.src = card.a[0];
-
-   }, function(errorObject) {
-     console.log("The read failed:" + errorObject);
-   });
-  }
-}
+};

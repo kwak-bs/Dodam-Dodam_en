@@ -1,6 +1,8 @@
 <html>
     <head>
       <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
       <audio id='audio_play' src='./sound/right.mp3'></audio>
       <script type="text/javascript">
       function play() {
@@ -13,16 +15,18 @@
         }
       }
       </script>
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
+      <script src="dooriDB"></script>
+
       <div class="flip-card">
 <div class="flip-card-inner">
   <div class="flip-card-front" onclick="play()">
-    <img src="./images/포도사진.png" alt="포도";>
+    <img id="word-card" alt="포도";>
   </div>
   <div class="flip-card-back">
-    <img src="./images/포도글씨.png" alt="포도";>
+    <img id="word-card-back" alt="포도";>
   </div>
 </div>
 </div>

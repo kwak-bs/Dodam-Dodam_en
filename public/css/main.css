@@ -2,7 +2,7 @@ body {
     text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */
 }
 html {
-    background: url('images/backgrounds.jpg') no-repeat center center fixed; /* 가운데 고정에 이미지가 반복되지 않도록 설정 */
+    background: url('../images/backgrounds.jpg') no-repeat center center fixed; /* 가운데 고정에 이미지가 반복되지 않도록 설정 */
     -webkit-background-size: cover; /* 사파리에서의 배경 사이즈 */
     -moz-background-size: cover; /* 파이어폭스에서의 배경 사이즈 */
     -o-background-size: cover; /* 오페라에서의 배경 사이즈 */

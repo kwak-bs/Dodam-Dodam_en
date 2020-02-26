@@ -1,4 +1,11 @@
 
-# Dodam-Dodam_en
+# 도담도담 팀 프로젝트
 
-<iframe width="640" height="360" src="https://www.youtube.com/watch?v=Gt5811J6ylM" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+
+# 도담도담 시연영상 (유투브 링크)
+[![Video Label](http://img.youtube.com/vi/Gt5811J6ylM/0.jpg)](https://www.youtube.com/watch?v=Gt5811J6ylM) 
+
+병선, 두리, 설아, 동환 홧팅 
+
+
+

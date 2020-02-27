@@ -1,5 +1,5 @@
 ### 프로젝트 설명
-기존에 있던 Interactive Canvas Sample 예제(삼각형 회전 및 색깔 변환 게임)코드를 응용하여 만든 **web app**입니다. 이 프로젝트의 목적은 **Actions on Google 플랫폼**을 이용하여 **Interactive canvas Google 음성인식 AI 서비스**를 만들고자 하였습니다. PIXI.js를 이용하였고 **firebase 플랫폼**을 이용하여 배포하였습니다. <br>**배포된 도메인**은 https://cantododam.firebaseapp.com/ 이며 본인이 이 web app을 보고 싶으시면 위 web app을 clone하시고 아래 사용법을 참조하여 본인의 firebase에서 배포하신다음 사용하시면 됩니다. 참고로 이 웹 앱 프로젝트의 target device는 google nest hub 기반이며(반응형 x), 자세한 프로젝트의 동작 및 UI 구성은 첫 Dodam-Dodam_en 레포 README.md에 있는 영상을 보시면 됩니다. 
+기존에 있던 Interactive Canvas Sample 예제(삼각형 회전 및 색깔 변환 게임)코드를 응용하여 만든 **web app**입니다. 이 프로젝트의 목적은 **Actions on Google 플랫폼**을 이용하여 **Interactive canvas Google 음성인식 AI 서비스**를 만들고자 하였습니다. PIXI.js를 이용하였고 **firebase 플랫폼**을 이용하여 배포하였습니다. <br>**배포된 도메인**은 https://cantododam.firebaseapp.com/ 이며 본인이 이 web app을 보고 싶으시면 위 web app을 clone하시고 아래 사용법을 참조하여 본인의 firebase에서 배포하신다음 사용하시면 됩니다. 참고로 이 웹 앱 프로젝트의 target device는 google nest hub 기반이며(반응형 x), 자세한 프로젝트의 동작 및 UI 구성은 Dodam-Dodam_en repository 첫 README.md에 있는 영상을 보시면 됩니다. 
 #### web app 개발자 : 곽병선, 김두리, 한설아, 이동환
 
 

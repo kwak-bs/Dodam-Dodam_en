@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="contextRoot" data-th-attr="content=${#request.contextPath}">
+    <meta name="userId" data-th-attr="content=${session.userId}">
+    <meta name="productId" data-th-attr="content=${productId}">
+    <title>Sky 쇼핑몰 상품 구매</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/flatpickr.min.css}">
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js-o2o/product.js}"></script>
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        .feather {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
+
+        .sidebar {
+            font-size: .875rem;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100; /* Behind the navbar */
+            padding: 0;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+
+        .sidebar-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 48px; /* Height of navbar */
+            height: calc(100vh - 48px);
+            padding-top: .5rem;
+            overflow-x: hidden;
+            overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        }
+
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .sidebar .nav-link .feather {
+            margin-right: 4px;
+            color: #999;
+        }
+
+        .sidebar .nav-link.active {
+            color: #007bff;
+        }
+
+        .sidebar .nav-link:hover .feather,
+        .sidebar .nav-link.active .feather {
+            color: inherit;
+        }
+
+        .sidebar-heading {
+            font-size: .75rem;
+            text-transform: uppercase;
+        }
+
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .container {
+            width: auto;
+            max-width: 1280px;
+            padding: 0 15px;
+        }
+
+        .footer {
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body class="w-100 h-100">
+<div class="d-flex w-100 h-100 mx-auto flex-column">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" th:href="@{/}">Sky 쇼핑몰</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link o2o-nav-link" href="#" data-id="1">상품</a></li>
+                <li class="nav-item"><a class="nav-link o2o-nav-link" href="#" data-id="2">구매이력</a></li>
+                <!-- <li class="nav-item">
+        <a class="nav-link disabled" th:href="@{/}" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+       -->
+            </ul>
+            <form th:if="${session.userId} == null" class="form-inline my-2 my-lg-0" id="form-login"
+                  th:action="@{/login}"
+                  method="get">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
+            </form>
+            <form th:unless="${session.userId} == null" class="form-inline my-2 my-lg-0" id="form-logout"
+                  th:action="@{/api/1.0/logout}" method="post">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <main role="main" class="col-md-12 ml-sm-auto col-lg-12 pt-3 px-4">
+				<div class="card mb-4 shadow-sm">
+			      <div class="card-header">
+			        <h4 class="my-0 font-weight-normal" id="product_main_title"></h4>
+			      </div>
+			      <div class="card-body">
+					<img src="" id="product_main_image" style="object-fit: cover; object-position: top; display: block; height: 100%; width: 100%;"/>
+			        <h1 class="card-title pricing-card-title"><span id="product_main_cost"></span> <small class="text-muted">vat포함</small></h1>
+			        <div id="product_main_description">
+			        </div>
+			        <button type="button" class="btn btn-lg btn-block btn-primary">구매</button>
+			      </div>
+			    </div>
+            </main>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">&copy; O2O Inc. 2019</span>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

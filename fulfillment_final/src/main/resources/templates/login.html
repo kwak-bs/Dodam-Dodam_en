@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="contextRoot" data-th-attr="content=${#request.contextPath}">
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js-o2o/login.js}"></script>
+
+<style>
+html, body {
+	height: 100%;
+}
+
+body {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: auto;
+}
+
+.form-signin .checkbox {
+	font-weight: 400;
+}
+
+.form-signin .form-control {
+	position: relative;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+</style>
+</head>
+<body>
+	<form class="form-signin" th:action="@{/api/1.0/login}" method="post">
+		<!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg"
+			alt="" width="72" height="72">  -->
+		<h1 class="h3 mb-3 font-weight-normal">Please login</h1>
+		<label for="inputID" class="sr-only">ID</label>
+		<input type="text" id="inputID" name="inputID" class="form-control" placeholder="ID" required autofocus>
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
+		<!-- <div class="checkbox mb-3">
+			<label> <input type="checkbox" value="remember-me">
+				Remember me
+			</label>
+		</div>  -->
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+		<p class="mt-5 mb-3 text-muted">&copy; O2O Inc. 2019</p>
+	</form>
+</body>
+</html>

@@ -2,4 +2,4 @@
 
 ##### 도담도담 파일은 fulfillment_final폴더 자체를 클론하시고 src/main/java/com.o2o.action.server.app/DodamApp 파일에서 fulfillment코드를 확인하실 수 있습니다.
 
-#### 병두설 화이팅! 
+#### 병두설환 화이팅! 

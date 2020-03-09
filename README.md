@@ -3,5 +3,5 @@
 
 
 #### 도담도담 시연영상 (유투브 링크)
-[![Video Label](http://img.youtube.com/vi/Gt5811J6ylM/0.jpg)](https://www.youtube.com/watch?v=AXcjqv5eBh0) 
+[![Video Label](http://img.youtube.com/vi/Gt5811J6ylM/0.jpg)](https://www.youtube.com/watch?v=AXcjqv5eBh0?t=0s) 
 
